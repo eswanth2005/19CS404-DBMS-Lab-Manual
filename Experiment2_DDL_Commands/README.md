@@ -107,7 +107,7 @@ CREATE TABLE Table_Name (
 --
 -- ![image](https://github.com/user-attachments/assets/880fc67c-6f85-412b-9ff5-77205243a57a)
 
-```sql
+```
 INSERT INTO Customers VALUES(306,'Diana Prince',"Themyscira",NULL,NULL);
 INSERT INTO Customers VALUES(307,'Bruce Wayne',"Wayne Mano","Gotham",10007);
 INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
@@ -122,7 +122,7 @@ INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 ---
 ![image](https://github.com/user-attachments/assets/5daf55ef-dde3-43a7-a59d-fd63d61ab095)
 
-```sql
+```
 -- INSERT INTO Student_details VALUES(201,'David Lee',"M","Physics",92);
 ```
 
@@ -135,7 +135,7 @@ INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 ---
 ![image](https://github.com/user-attachments/assets/d24de01c-95c4-4b57-8416-c57385c3e5f7)
 
-```sql
+```
 -- insert into Student_details(Rollno,Name,Gender, Subject,MARKS)  select Rollno,Name,Gender, Subject,MARKS from Archived_students ;
 ```
 
@@ -149,7 +149,7 @@ INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 ![image](https://github.com/user-attachments/assets/452b5bd9-733f-4c19-8d02-4aac33988c80)
 
 
-```sql
+```
 -- CREATE table Bonuses(BonusID int primary key,EmployeeID int, BonusAmount REAL CHECK (BonusAmount >0) , BonusDate date, Reason Text not null,
    FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID) );
 ```
@@ -164,7 +164,7 @@ INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 ![image](https://github.com/user-attachments/assets/4b828e63-6b4b-47e3-a943-8b73dfc8493b)
 
 
-```sql
+```
 -- ALTER TABLE customer rename column city to location;
 ```
 
@@ -177,7 +177,7 @@ INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 ---
 ![image](https://github.com/user-attachments/assets/8e797b90-56e3-467b-baf7-e501043f50eb)
 
-```sql
+```
 -- create table Employees(EmployeeID int primary key, FirstName varchar(50) NOT NULL, LastName varchar(50) not null, Email varchar(50) UNIQUE,Salary decimal(10,2) CHECK ( Salary > 0), DepartmentID int , FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID) );
 ```
 
@@ -191,7 +191,7 @@ INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 ![image](https://github.com/user-attachments/assets/bb10daf5-88b4-436d-b076-0a530382f324)
 
 
-```sql
+```
 -- create table item(item_id text primary key,item_desc text not null,rate int not null, icom_id  text varchar(4), FOREIGN KEY (icom_id) references company(com_id) ON UPDATE CASCADE ON DELETE CASCADE );
 ```
 
@@ -206,7 +206,6 @@ INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 
 
 ```
-sql
 -- CREATE TABLE Events(EventID INTEGER, EventName TEXT,EventDate DATE);
 ```
 
@@ -220,7 +219,7 @@ sql
 ![image](https://github.com/user-attachments/assets/d10b44f0-c2be-4bf9-89e8-64ba0dafb45c)
 
 
-```sql
+```
 -- CREATE TABLE Attendance(AttendanceID INTEGER primary key, EmployeeID INTEGER ,AttendanceDate DATE, Status TEXT CHECK(Status IN ('Present','Absent', 'Leave')), FOREIGN KEY (EmployeeID) references Employees(EmployeeID)
 );
 ```
@@ -235,7 +234,7 @@ sql
 ![image](https://github.com/user-attachments/assets/9aa043b8-e286-420e-ac7b-81d6313792c0)
 
 
-```sql
+```
 -- alter table Student_details add column MobileNumber NUMBER ;
 alter table Student_details add column Address VARCHAR(100) ;
 ```
