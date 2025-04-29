@@ -55,7 +55,8 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/890c3f3c-4a12-47c4-abee-3aecae03072f)
+![image](https://github.com/user-attachments/assets/844b85fc-6fb4-447f-875a-544f893fe341)
+
 
 
 **Question 2**
