@@ -192,7 +192,9 @@ create table Employees(EmployeeID int primary key, FirstName varchar(50) NOT NUL
 
 
 ```
-create table item(item_id text primary key,item_desc text not null,rate int not null, icom_id  text varchar(4), FOREIGN KEY (icom_id) references company(com_id) ON UPDATE CASCADE ON DELETE CASCADE );
+create table item(item_id text primary key,item_desc text not null,
+rate int not null, icom_id  text varchar(4),
+FOREIGN KEY (icom_id) references company(com_id) ON UPDATE CASCADE ON DELETE CASCADE );
 ```
 
 **Output:**
@@ -220,7 +222,8 @@ CREATE TABLE Events(EventID INTEGER, EventName TEXT,EventDate DATE);
 
 
 ```
--CREATE TABLE Attendance(AttendanceID INTEGER primary key, EmployeeID INTEGER ,AttendanceDate DATE, Status TEXT CHECK(Status IN ('Present','Absent', 'Leave')), FOREIGN KEY (EmployeeID) references Employees(EmployeeID)
+-CREATE TABLE Attendance(AttendanceID INTEGER primary key, EmployeeID INTEGER ,AttendanceDate DATE, Status TEXT
+ CHECK(Status IN ('Present','Absent', 'Leave')), FOREIGN KEY (EmployeeID) references Employees(EmployeeID)
 );
 ```
 
