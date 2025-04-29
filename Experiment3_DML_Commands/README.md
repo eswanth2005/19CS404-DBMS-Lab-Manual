@@ -141,44 +141,55 @@ reorder_lvl    INT
 quantity       INT        
 supplier_id    INT           
 For example:
-
-Test	Result
-select changes();
-changes()
-----------
-4
+![image](https://github.com/user-attachments/assets/4ab4019d-f229-4531-8558-9880b711892f)
 
 ```sql
--- Paste your SQL code below for Question 4
+-- update products set category = "Household" where product_name like "%Detergent%";
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/f2547383-27de-4bb3-a2b7-6131f96bcfa7)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+-- Update the reorder level to 40 pieces for all products belonging to the 'Grocery' category in the products table.
+
+PRODUCTS TABLE
+
+name               type
+-----------------  ---------------
+product_id         INT
+product_name       VARCHAR(100)
+category           VARCHAR(50)
+cost_price         DECIMAL(10,2)
+sell_price         DECIMAL(10,2)
+reorder_lvl        INT
+quantity           INT
+supplier_id        INT
+![image](https://github.com/user-attachments/assets/5e43cbb1-4869-48fc-8fae-f0a6e9640577)
 
 ```sql
--- Paste your SQL code below for Question 5
+-- update products set reorder_lvl = 40 where category = 'Grocery';
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/951625cc-8732-4b5b-9aa7-bbc21775ef5f)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+-- Write a SQL query to Delete customers from 'customer' table where 'CUST_COUNTRY' is neither 'India' nor 'USA'.
 
 ```sql
--- Paste your SQL code below for Question 6
+-- delete from customer where CUST_COUNTRY NOT IN ('India','USA');
 ```
 
 **Output:**
 
-![Output6](output.png)
+
 
 **Question 7**
 ---
