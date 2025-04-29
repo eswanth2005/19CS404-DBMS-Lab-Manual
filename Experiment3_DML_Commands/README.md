@@ -47,15 +47,26 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Paste Question 1 here
+-- Increase the reorder level by 30% for products from 'Food' category having quantity in stock less than 50% of existing reorder level in the products table
+name               type
+--------------  ----------
+product_id         INT
+product_name       VARCHAR(10)
+category           VARCHAR(50)
+cost_price         DECIMAL(10)
+sell_price         DECIMAL(10)
+reorder_lvl        INT
+quantity              INT
+supplier_id           INT
 
 ```sql
--- Paste your SQL code below for Question 1
+-- update products set reorder_lvl = reorder_lvl * 1.30 where quantity < 0.5* reorder_lvl;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/102f1d50-a08e-4c54-9952-56d5355ebbb4)
+
 
 **Question 2**
 ---
