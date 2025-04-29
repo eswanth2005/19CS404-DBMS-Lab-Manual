@@ -58,6 +58,7 @@ sell_price         DECIMAL(10)
 reorder_lvl        INT
 quantity              INT
 supplier_id           INT
+![image](https://github.com/user-attachments/assets/3eafb686-e2af-4ca1-8d2b-133f58cbb2f5)
 
 ```sql
 -- update products set reorder_lvl = reorder_lvl * 1.30 where quantity < 0.5* reorder_lvl;
@@ -65,36 +66,87 @@ supplier_id           INT
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/102f1d50-a08e-4c54-9952-56d5355ebbb4)
+![image](https://github.com/user-attachments/assets/890c3f3c-4a12-47c4-abee-3aecae03072f)
 
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- Write a SQL statement to Update the product_name to 'Premium Bread' whose product ID is 5 in the products table.
+
+Products table
+
+---------------
+product_id
+product_name
+category
+cost_price
+sell_price
+reorder_lvl
+quantity
+supplier_id
 
 ```sql
--- Paste your SQL code below for Question 2
+-- update products set product_name = "Premium Bread" where product_id = 5;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/99970b78-d9a2-4ec9-99cb-833c315518ee)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+-- Write a SQL statement to Increase the salary by 500 and email as 'updated' for employees with job ID 'SA_REP' and commission percentage greater than 0.15
+
+Employees table
+
+---------------
+employee_id
+first_name
+last_name
+email
+phone_number
+hire_date
+job_id
+salary
+commission_pct
+manager_id
+department_id
+![image](https://github.com/user-attachments/assets/d40e0ae6-5b3e-450a-8227-3ce0fa2f9481)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+-- update Employees set salary= salary+500 , email = "updated" where job_id = "SA_REP" and commission_pct >0.15;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/f08e7bf6-8c28-4ca7-93f7-2ca14b715df4)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+-- Write a SQL statement to Change the category to 'Household' where product name contains 'Detergent' in the products table.
+
+Products Table 
+
+name          type       
+----------    ---------- 
+product_id     INT PRIMARY KEY        
+product_name   VARCHAR(10) 
+category       VARCHAR(50) 
+cost_price     DECIMAL(10) 
+sell_price     DECIMAL(10) 
+reorder_lvl    INT        
+quantity       INT        
+supplier_id    INT           
+For example:
+
+Test	Result
+select changes();
+changes()
+----------
+4
 
 ```sql
 -- Paste your SQL code below for Question 4
