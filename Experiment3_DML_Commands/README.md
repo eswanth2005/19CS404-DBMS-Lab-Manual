@@ -180,7 +180,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Output:**
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/23bb6dcb-be7d-42a2-bcdd-0b78e0ac1bc9)
 
 
 ## RESULT
