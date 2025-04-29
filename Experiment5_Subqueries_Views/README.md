@@ -38,123 +38,188 @@ DROP VIEW view_name;
 
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/1ec4cc5a-4bca-4cd3-b6c8-9d6bf3b99b4c)
 
-```sql
--- Paste your SQL code below for Question 1
+
+```
+SELECT * FROM CUSTOMERS 
+WHERE SALARY > 4500;
+
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/5064701d-8e45-48d1-86dc-94ce7deb85e6)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/8b96cbab-659f-4538-b087-2bd1efa45f06)
 
-```sql
--- Paste your SQL code below for Question 2
+```
+SELECT name, city
+FROM customer
+WHERE city IN (
+    SELECT city
+    FROM customer
+    WHERE id IN (3, 7)
+);
+
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/6fd9db10-91fc-44d2-b0ff-370869037591)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
 
-```sql
--- Paste your SQL code below for Question 3
+![image](https://github.com/user-attachments/assets/82091753-7884-48f5-a278-1be8910d49b1)
+
+```
+SELECT name FROM customer
+WHERE phone IN (
+    SELECT phone
+    FROM customer
+    GROUP BY phone
+    HAVING COUNT(*) = 1
+);
+
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/150101c0-2533-42fc-a60b-07beed478b20)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/fee776d8-983a-40a2-8acd-fd1fa5ea7cb7)
 
-```sql
--- Paste your SQL code below for Question 4
+```
+SELECT o.ord_no, o.purch_amt, o.ord_date, o.customer_id, o.salesman_id
+FROM orders o
+JOIN salesman s ON o.salesman_id = s.salesman_id
+WHERE s.name = 'Paul Adam';
+
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/f69f16d8-939e-4d32-ab61-60f2849b9e58)
 
-![Output4](output.png)
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/7fe7c750-8ec7-4e68-ae2f-f1a67c7cfbcc)
 
-```sql
--- Paste your SQL code below for Question 5
+
+```
+SELECT ord_no, purch_amt, ord_date, 
+customer_id, salesman_id
+FROM orders
+WHERE salesman_id IN (
+    SELECT salesman_id
+    FROM orders
+    WHERE customer_id = 3007
+);
+
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/a70f5af3-3538-424a-98e4-cc0a75969ddf)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/85109539-010a-45d6-9f74-91fa4107ba5e)
 
-```sql
--- Paste your SQL code below for Question 6
+
+```
+SELECT * FROM CUSTOMERS
+WHERE SALARY = 1500;
+
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/3cd0cedd-073c-4116-b065-d3f6face40e9)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/087a1f5e-6c9f-4564-a6de-47d81ff2acac)
 
-```sql
--- Paste your SQL code below for Question 7
+
+```
+SELECT ord_no, purch_amt, ord_date, 
+customer_id, salesman_id
+FROM orders
+WHERE purch_amt > (
+    SELECT AVG(purch_amt)
+    FROM orders
+    WHERE ord_date = '2012-10-10'
+);
+
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/2ed5e119-9a94-42bc-8a62-0216aed4f94b)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/33b23fdf-abd4-4910-a336-ec17e4b49c7a)
 
-```sql
--- Paste your SQL code below for Question 8
+```
+SELECT id, name, city,
+email, phone
+FROM customer
+WHERE city != (
+    SELECT city
+    FROM customer
+    WHERE id = (SELECT MAX(id) FROM customer)
+);
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/76d4ef58-7fbd-4e54-906d-c61a20e272e2)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/f8254381-ddb9-4e62-955d-40c288cfbc9e)
 
-```sql
--- Paste your SQL code below for Question 9
+
+```
+SELECT * FROM CUSTOMERS WHERE AGE < 30;
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/4346f387-b193-40de-a9e6-dd2024b21d04)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/0cd2f709-b783-4f5e-a889-a0d49b0bebc4)
 
-```sql
--- Paste your SQL code below for Question 10
+
+```
+SELECT o.ord_no, o.purch_amt, o.ord_date,
+o.customer_id, o.salesman_id
+FROM orders o
+JOIN salesman s ON o.salesman_id = s.salesman_id
+WHERE s.city = 'New York';
+
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/b30cae6a-91c2-4718-8e7f-b765669ae277)
 
 
 ## RESULT
