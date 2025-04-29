@@ -192,63 +192,91 @@ For example:
 
 **Question 6**
 ---
--- Paste Question 6 here
+-- Create a table named Employees with the following constraints:
+
+EmployeeID should be the primary key.
+FirstName and LastName should be NOT NULL.
+Email should be unique.
+Salary should be greater than 0.
+DepartmentID should be a foreign key referencing the Departments table.
 
 ```sql
--- Paste your SQL code below for Question 6
+-- create table Employees(EmployeeID int primary key, FirstName varchar(50) NOT NULL, LastName varchar(50) not null, Email varchar(50) UNIQUE,Salary decimal(10,2) CHECK ( Salary > 0), DepartmentID int , FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID) );
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/8a5a14ce-4f84-4a9e-885f-1e7d1b136317)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+-- Create a new table named item with the following specifications and constraints:
+item_id as TEXT and as primary key.
+item_desc as TEXT.
+rate as INTEGER.
+icom_id as TEXT with a length of 4.
+icom_id is a foreign key referencing com_id in the company table.
+The foreign key should cascade updates and deletes.
+item_desc and rate should not accept NULL.
 
 ```sql
--- Paste your SQL code below for Question 7
+-- create table item(item_id text primary key,item_desc text not null,rate int not null, icom_id  text varchar(4), FOREIGN KEY (icom_id) references company(com_id) ON UPDATE CASCADE ON DELETE CASCADE );
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/65ac5931-8fba-49ec-a0f6-3e7aaf515c7b)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+--Create a table named Events with the following columns:
 
-```sql
--- Paste your SQL code below for Question 8
+EventID as INTEGER
+EventName as TEXT
+EventDate as DATE
+
+```
+
+-- CREATE TABLE Events(EventID INTEGER, EventName TEXT,EventDate DATE);
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/06074cc7-a9da-4e90-8b70-1cf7f4836ec5)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+-- Create a table named Attendance with the following constraints:
+AttendanceID as INTEGER should be the primary key.
+EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
+AttendanceDate as DATE.
+Status as TEXT should be one of 'Present', 'Absent', 'Leave'.
 
 ```sql
--- Paste your SQL code below for Question 9
+-- CREATE TABLE Attendance(AttendanceID INTEGER primary key, EmployeeID INTEGER ,AttendanceDate DATE, Status TEXT CHECK(Status IN ('Present','Absent', 'Leave')), FOREIGN KEY (EmployeeID) references Employees(EmployeeID)
+);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/3853019c-6df1-45a9-86f8-e478ca399938)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+-- Write a SQL query to add a new column MobileNumber of type NUMBER and a new column Address of type VARCHAR(100) to the Student_details table.
 
 ```sql
--- Paste your SQL code below for Question 10
+-- alter table Student_details add column MobileNumber NUMBER ;
+alter table Student_details add column Address VARCHAR(100) ;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/6c5945d7-d9e9-41cc-a91b-568e82c99970)
 
 
 ## RESULT
