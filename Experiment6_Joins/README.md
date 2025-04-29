@@ -93,7 +93,7 @@ AND "2024-01-31"
 
 
 **Question 3**
----
+
 ![Screenshot 2025-04-30 003449](https://github.com/user-attachments/assets/fc8c13f4-b767-4470-8a8d-adcef4127b72)
 ![image](https://github.com/user-attachments/assets/8d07f3e5-8ce7-43c5-b0a2-d80bfe4b1008)
 
@@ -146,7 +146,8 @@ where o.purch_amt between 500 and 2000 ;
 
 ```
 select c.cust_name from customer c left join
-orders o on c.customer_id = o.customer_id ;```
+orders o on c.customer_id = o.customer_id ;
+```
 
 **Output:**
 
