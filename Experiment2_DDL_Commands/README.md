@@ -106,6 +106,7 @@ CREATE TABLE Table_Name (
 **Question 1**
 --
 -- In the Cusomers table, insert a record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
+![image](https://github.com/user-attachments/assets/4ac69e72-2d3a-4cb1-8e45-b79ff8fbf5ec)
 
 ```sql
 INSERT INTO Customers VALUES(306,'Diana Prince',"Themyscira",NULL,NULL);
@@ -121,6 +122,7 @@ INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 **Question 2**
 ---
 -- Insert a student with RollNo 201, Name David Lee, Gender M, Subject Physics, and MARKS 92 into the Student_details table.
+![image](https://github.com/user-attachments/assets/cc93b1fa-c421-4012-9fdf-b3f4f29d6e76)
 
 ```sql
 -- INSERT INTO Student_details VALUES(201,'David Lee',"M","Physics",92);
@@ -128,43 +130,65 @@ INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/6b1f0c55-ef07-4af1-a998-bea01b6d94ff)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+-- Insert all students from Archived_students table into the Student_details table.
+
+cid         name        type        notnull     dflt_value  pk
+----------  ----------  ----------  ----------  ----------  ----------
+0           RollNo      INT           0                       1
+1           Name        VARCHAR(100)  0                       0
+2           Gender      VARCHAR(10)   0                       0
+3           Subject     VARCHAR(50)   0                       0
+4           MARKS       INT           0                       0
+![image](https://github.com/user-attachments/assets/c8dca14a-a119-4133-b423-81ed51f1cc4f)
 
 ```sql
--- Paste your SQL code below for Question 3
+-- insert into Student_details(Rollno,Name,Gender, Subject,MARKS)  select Rollno,Name,Gender, Subject,MARKS from Archived_students ;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/f7fc52e8-8425-4264-995d-4ad3e876a2a1)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+-- Create a table named Bonuses with the following constraints:
+BonusID as INTEGER should be the primary key.
+EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
+BonusAmount as REAL should be greater than 0.
+BonusDate as DATE.
+Reason as TEXT should not be NULL.
+For example:
+
 
 ```sql
--- Paste your SQL code below for Question 4
+-- CREATE table Bonuses(BonusID int primary key,EmployeeID int, BonusAmount REAL CHECK (BonusAmount >0) , BonusDate date, Reason Text not null,
+   FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID) );
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/c57f9af0-7f3a-40a9-a034-f35777346bcb)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+-- ![image](https://github.com/user-attachments/assets/4b828e63-6b4b-47e3-a943-8b73dfc8493b)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+-- ALTER TABLE customer rename column city to location;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/764e10d9-33cb-43ef-b411-ef7af8c73414)
+
 
 **Question 6**
 ---
