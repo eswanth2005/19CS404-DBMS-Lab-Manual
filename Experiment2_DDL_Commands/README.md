@@ -105,22 +105,25 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+-- In the Cusomers table, insert a record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
 
 ```sql
--- Paste your SQL code below for Question 1
+INSERT INTO Customers VALUES(306,'Diana Prince',"Themyscira",NULL,NULL);
+INSERT INTO Customers VALUES(307,'Bruce Wayne',"Wayne Mano","Gotham",10007);
+INSERT INTO Customers VALUES(308,'Peter Parker',"Queens",NULL,11375);
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/debc6422-d386-42cd-86fc-5167b8829e6e)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- Insert a student with RollNo 201, Name David Lee, Gender M, Subject Physics, and MARKS 92 into the Student_details table.
 
 ```sql
--- Paste your SQL code below for Question 2
+-- INSERT INTO Student_details VALUES(201,'David Lee',"M","Physics",92);
 ```
 
 **Output:**
