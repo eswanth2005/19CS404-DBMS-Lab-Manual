@@ -136,7 +136,8 @@ INSERT INTO Student_details VALUES(201,'David Lee',"M","Physics",92);
 ![image](https://github.com/user-attachments/assets/d24de01c-95c4-4b57-8416-c57385c3e5f7)
 
 ```
-insert into Student_details(Rollno,Name,Gender, Subject,MARKS)  select Rollno,Name,Gender, Subject,MARKS from Archived_students ;
+insert into Student_details(Rollno,Name,Gender, Subject,MARKS)
+select Rollno,Name,Gender, Subject,MARKS from Archived_students ;
 ```
 
 **Output:**
@@ -150,8 +151,10 @@ insert into Student_details(Rollno,Name,Gender, Subject,MARKS)  select Rollno,Na
 
 
 ```
-CREATE table Bonuses(BonusID int primary key,EmployeeID int, BonusAmount REAL CHECK (BonusAmount >0) , BonusDate date, Reason Text not null,
-   FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID) );
+CREATE table Bonuses(BonusID int primary key,EmployeeID int,
+BonusAmount REAL CHECK (BonusAmount >0) ,
+BonusDate date, Reason Text not null,
+FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID) );
 ```
 
 **Output:**
@@ -178,7 +181,10 @@ ALTER TABLE customer rename column city to location;
 ![image](https://github.com/user-attachments/assets/8e797b90-56e3-467b-baf7-e501043f50eb)
 
 ```
-create table Employees(EmployeeID int primary key, FirstName varchar(50) NOT NULL, LastName varchar(50) not null, Email varchar(50) UNIQUE,Salary decimal(10,2) CHECK ( Salary > 0), DepartmentID int , FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID) );
+create table Employees(EmployeeID int primary key,
+FirstName varchar(50) NOT NULL, LastName varchar(50) not null, Email varchar(50) UNIQUE,
+Salary decimal(10,2) CHECK ( Salary > 0),
+DepartmentID int , FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID) );
 ```
 
 **Output:**
@@ -238,7 +244,7 @@ CREATE TABLE Events(EventID INTEGER, EventName TEXT,EventDate DATE);
 
 
 ```
- alter table Student_details add column MobileNumber NUMBER ;
+alter table Student_details add column MobileNumber NUMBER ;
 alter table Student_details add column Address VARCHAR(100) ;
 ```
 
