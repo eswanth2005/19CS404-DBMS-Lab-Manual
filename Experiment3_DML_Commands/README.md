@@ -49,7 +49,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 --
 -- ![image](https://github.com/user-attachments/assets/cc97fc63-e426-4a66-bff3-56132a382d12)
 
-```sql
+```
 -- update products set reorder_lvl = reorder_lvl * 1.30 where quantity < 0.5* reorder_lvl;
 ```
 
@@ -64,7 +64,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 -- ![image](https://github.com/user-attachments/assets/3b763fdc-328b-4db2-a676-4e207cbf56d0)
 
 
-```sql
+```
 -- update products set product_name = "Premium Bread" where product_id = 5;
 ```
 
@@ -78,7 +78,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 -- ![image](https://github.com/user-attachments/assets/02f565f7-eb4f-40ac-8762-46d7e3bca327)
 
 
-```sql
+```
 -- update Employees set salary= salary+500 , email = "updated" where job_id = "SA_REP" and commission_pct >0.15;
 ```
 
@@ -92,8 +92,9 @@ SELECT column1, column2 FROM table_name WHERE condition;
 -- ![image](https://github.com/user-attachments/assets/97de0164-ca55-497e-b158-6362fc385a65)
 
 
-```sql
--- update products set category = "Household" where product_name like "%Detergent%";
+```
+update products set category = "Household"
+where product_name like "%Detergent%";
 ```
 
 **Output:**
@@ -105,7 +106,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ---
 -- ![image](https://github.com/user-attachments/assets/7ec86962-4478-4ba0-8b23-8b08500a1f27)
 
-```sql
+```
 -- update products set reorder_lvl = 40 where category = 'Grocery';
 ```
 
@@ -119,7 +120,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 -- ![image](https://github.com/user-attachments/assets/78be3128-0101-4027-b174-f4c92e5cc9ec)
 .
 
-```sql
+```
 -- delete from customer where CUST_COUNTRY NOT IN ('India','USA');
 ```
 
@@ -132,7 +133,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 -- ![image](https://github.com/user-attachments/assets/3f8dc143-c0a5-494b-add0-32fb3b847b2d)
 
 
-```sql
+```
 -- DELETE from customer where GRADE = 2 and CUST_NAME like "M%" and PAYMENT_AMT <3000 ;
 ```
 
@@ -146,7 +147,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 -- ![image](https://github.com/user-attachments/assets/1008aa2d-4b38-43f1-81df-3cacc94b140c)
 
 
-```sql
+```
 -- delete from surgeries where surgery_date = "2024-02-28";
 ```
 
@@ -160,7 +161,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 -- ![image](https://github.com/user-attachments/assets/e0215afa-955d-4276-b2bf-27fa9881b960)
 
 
-```sql
+```
 -- delete from customer where CUST_NAME like "%Holmes%";
 ```
 
@@ -174,7 +175,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 -- ![image](https://github.com/user-attachments/assets/bf751c96-9686-49e5-8834-0f9517823030)
 
 
-```sql
+```
 -- select CategoryName, Description FROM categories order by CategoryName;
 ```
 
