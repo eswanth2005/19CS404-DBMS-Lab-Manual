@@ -47,18 +47,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Increase the reorder level by 30% for products from 'Food' category having quantity in stock less than 50% of existing reorder level in the products table
-name               type
---------------  ----------
-product_id         INT
-product_name       VARCHAR(10)
-category           VARCHAR(50)
-cost_price         DECIMAL(10)
-sell_price         DECIMAL(10)
-reorder_lvl        INT
-quantity              INT
-supplier_id           INT
-![image](https://github.com/user-attachments/assets/3eafb686-e2af-4ca1-8d2b-133f58cbb2f5)
+-- ![image](https://github.com/user-attachments/assets/cc97fc63-e426-4a66-bff3-56132a382d12)
 
 ```sql
 -- update products set reorder_lvl = reorder_lvl * 1.30 where quantity < 0.5* reorder_lvl;
@@ -71,19 +60,8 @@ supplier_id           INT
 
 **Question 2**
 ---
--- Write a SQL statement to Update the product_name to 'Premium Bread' whose product ID is 5 in the products table.
+-- ![image](https://github.com/user-attachments/assets/3b763fdc-328b-4db2-a676-4e207cbf56d0)
 
-Products table
-
----------------
-product_id
-product_name
-category
-cost_price
-sell_price
-reorder_lvl
-quantity
-supplier_id
 
 ```sql
 -- update products set product_name = "Premium Bread" where product_id = 5;
@@ -96,23 +74,7 @@ supplier_id
 
 **Question 3**
 ---
--- Write a SQL statement to Increase the salary by 500 and email as 'updated' for employees with job ID 'SA_REP' and commission percentage greater than 0.15
-
-Employees table
-
----------------
-employee_id
-first_name
-last_name
-email
-phone_number
-hire_date
-job_id
-salary
-commission_pct
-manager_id
-department_id
-![image](https://github.com/user-attachments/assets/d40e0ae6-5b3e-450a-8227-3ce0fa2f9481)
+-- ![image](https://github.com/user-attachments/assets/02f565f7-eb4f-40ac-8762-46d7e3bca327)
 
 
 ```sql
@@ -126,22 +88,8 @@ department_id
 
 **Question 4**
 ---
--- Write a SQL statement to Change the category to 'Household' where product name contains 'Detergent' in the products table.
+-- ![image](https://github.com/user-attachments/assets/97de0164-ca55-497e-b158-6362fc385a65)
 
-Products Table 
-
-name          type       
-----------    ---------- 
-product_id     INT PRIMARY KEY        
-product_name   VARCHAR(10) 
-category       VARCHAR(50) 
-cost_price     DECIMAL(10) 
-sell_price     DECIMAL(10) 
-reorder_lvl    INT        
-quantity       INT        
-supplier_id    INT           
-For example:
-![image](https://github.com/user-attachments/assets/4ab4019d-f229-4531-8558-9880b711892f)
 
 ```sql
 -- update products set category = "Household" where product_name like "%Detergent%";
@@ -154,21 +102,7 @@ For example:
 
 **Question 5**
 ---
--- Update the reorder level to 40 pieces for all products belonging to the 'Grocery' category in the products table.
-
-PRODUCTS TABLE
-
-name               type
------------------  ---------------
-product_id         INT
-product_name       VARCHAR(100)
-category           VARCHAR(50)
-cost_price         DECIMAL(10,2)
-sell_price         DECIMAL(10,2)
-reorder_lvl        INT
-quantity           INT
-supplier_id        INT
-![image](https://github.com/user-attachments/assets/5e43cbb1-4869-48fc-8fae-f0a6e9640577)
+-- ![image](https://github.com/user-attachments/assets/7ec86962-4478-4ba0-8b23-8b08500a1f27)
 
 ```sql
 -- update products set reorder_lvl = 40 where category = 'Grocery';
@@ -181,7 +115,8 @@ supplier_id        INT
 
 **Question 6**
 ---
--- Write a SQL query to Delete customers from 'customer' table where 'CUST_COUNTRY' is neither 'India' nor 'USA'.
+-- ![image](https://github.com/user-attachments/assets/78be3128-0101-4027-b174-f4c92e5cc9ec)
+.
 
 ```sql
 -- delete from customer where CUST_COUNTRY NOT IN ('India','USA');
@@ -189,55 +124,63 @@ supplier_id        INT
 
 **Output:**
 
-
+![image](https://github.com/user-attachments/assets/afe6e6f9-8dc0-45e6-bff2-d0d6f2428024)
 
 **Question 7**
 ---
--- Paste Question 7 here
+-- ![image](https://github.com/user-attachments/assets/3f8dc143-c0a5-494b-add0-32fb3b847b2d)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+-- DELETE from customer where GRADE = 2 and CUST_NAME like "M%" and PAYMENT_AMT <3000 ;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/6cdf3f0f-88ac-4c91-a07e-18f22a5444c8)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+-- ![image](https://github.com/user-attachments/assets/1008aa2d-4b38-43f1-81df-3cacc94b140c)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+-- delete from surgeries where surgery_date = "2024-02-28";
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/ad66bb58-8995-4f7d-8c0c-bbb2a3ac7d7d)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+-- ![image](https://github.com/user-attachments/assets/e0215afa-955d-4276-b2bf-27fa9881b960)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+-- delete from customer where CUST_NAME like "%Holmes%";
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/a8148f5c-e9ae-4389-acd3-7584036a47a3)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+-- ![image](https://github.com/user-attachments/assets/bf751c96-9686-49e5-8834-0f9517823030)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+-- select CategoryName, Description FROM categories order by CategoryName;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![Uploading image.png…]()
+
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
