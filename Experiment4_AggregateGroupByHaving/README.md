@@ -143,6 +143,7 @@ group by category_id having AVG(Price) BETWEEN 10 and 15;
 ```
 
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/abde0b0f-1c11-439c-9433-52a390986a37)
 
 
